@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: API de tareas
+  description: API para gestionar tareas
+  version: 1.0.0
+paths:
+  /tasks:
+    get:
+      summary: Obtener todas las tareas
+      responses:
+        200:
+          description: Lista de tareas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+    post:
+      summary: Añadir una nueva tarea
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task:
+                  type: string
+      responses:
+        200:
+          description: Tarea añadida
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  task:
+                    type: string
