@@ -5,6 +5,7 @@ The project is part of a personal roadmap created with ChatGPT.
 ## Stack
 - **NodeJS + Express**: Main technology stack for building the API.
 - **Swagger**: API documentation.
+- **PostgreSQL**: Database.
 
 ## Installation
 1. Clone the repository:
@@ -16,10 +17,14 @@ The project is part of a personal roadmap created with ChatGPT.
    pnpm install
 3. Start the application:
    ```bash
-   node index.js
+   node --watch index.js
 4. Access the API documentation at:  
    http://localhost:3000/api-docs
 
+## Last changes
+Added postgresql database support.
+Switched from dotenv to loadEnvFile for environment variable management.
+API reload is now handled with the --watch command.
+
 ## Next Updates
-Currently, the data does not persist.  
-The next update will add a database connection for persistence
+Add Sequelize support for database interaction.

@@ -4,7 +4,7 @@ info:
   description: API para gestionar tareas
   version: 1.0.0
 paths:
-  /tasks:
+  /api/todos/:
     get:
       summary: Obtener todas las tareas
       responses:
@@ -25,7 +25,7 @@ paths:
             schema:
               type: object
               properties:
-                task:
+                title:
                   type: string
       responses:
         200:
